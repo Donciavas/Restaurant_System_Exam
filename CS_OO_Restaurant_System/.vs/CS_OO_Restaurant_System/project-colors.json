@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4556a6f8-9cf3-4cb6-8e85-8753e449ec05": {
+      "ProjectGuid": "4556a6f8-9cf3-4cb6-8e85-8753e449ec05",
+      "DisplayName": "Restaurant_System",
+      "ColorIndex": 0
+    },
+    "d6c79755-569c-408c-8590-7e1c674aba7e": {
+      "ProjectGuid": "d6c79755-569c-408c-8590-7e1c674aba7e",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

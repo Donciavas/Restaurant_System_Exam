@@ -1,0 +1,11 @@
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\CS_OO_Restaurant_System.exe.config
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\CS_OO_Restaurant_System.exe
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\CS_OO_Restaurant_System.pdb
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\Restaurant_System.csproj.AssemblyReference.cache
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\Restaurant_System.csproj.SuggestedBindingRedirects.cache
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\Restaurant_System.Form1.resources
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\CS_OO_Restaurant_System.Properties.Resources.resources
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\Restaurant_System.csproj.GenerateResource.cache
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\Restaurant_System.csproj.CoreCompileInputs.cache
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\CS_OO_Restaurant_System.exe
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\CS_OO_Restaurant_System.pdb
