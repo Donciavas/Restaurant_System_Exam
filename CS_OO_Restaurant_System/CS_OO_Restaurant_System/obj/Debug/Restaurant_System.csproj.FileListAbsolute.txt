@@ -36,3 +36,6 @@ C:\Users\dvitk\OneDrive\Documents\CodeAcademy\C#.net\Advanced\Restaurant_System_
 C:\Users\dvitk\OneDrive\Documents\CodeAcademy\C#.net\Advanced\Restaurant_System_Exam\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\Restaurant_System.csproj.CopyComplete
 C:\Users\dvitk\OneDrive\Documents\CodeAcademy\C#.net\Advanced\Restaurant_System_Exam\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\CS_OO_Restaurant_System.exe
 C:\Users\dvitk\OneDrive\Documents\CodeAcademy\C#.net\Advanced\Restaurant_System_Exam\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\CS_OO_Restaurant_System.pdb
+C:\Users\dvitk\OneDrive\Documents\CodeAcademy\C#.net\Advanced\Restaurant_System_Exam\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\MailKit.dll
+C:\Users\dvitk\OneDrive\Documents\CodeAcademy\C#.net\Advanced\Restaurant_System_Exam\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\MailKit.pdb
+C:\Users\dvitk\OneDrive\Documents\CodeAcademy\C#.net\Advanced\Restaurant_System_Exam\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\MailKit.xml

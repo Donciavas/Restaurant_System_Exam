@@ -82,15 +82,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.rtReceipt = new System.Windows.Forms.RichTextBox();
             this.chkReserveTable = new System.Windows.Forms.CheckedListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -767,97 +758,7 @@
             this.chkReserveTable.Name = "chkReserveTable";
             this.chkReserveTable.Size = new System.Drawing.Size(893, 49);
             this.chkReserveTable.TabIndex = 1;
-            this.chkReserveTable.SelectedIndexChanged += new System.EventHandler(CheckToReserveTable);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(66, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(30, 18);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(66, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(30, 18);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(66, 155);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(30, 18);
-            this.textBox3.TabIndex = 22;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(185, 155);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(30, 18);
-            this.textBox6.TabIndex = 25;
-            this.textBox6.Text = "0";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(185, 140);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(30, 18);
-            this.textBox5.TabIndex = 24;
-            this.textBox5.Text = "0";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(185, 124);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(30, 18);
-            this.textBox4.TabIndex = 23;
-            this.textBox4.Text = "0";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(304, 155);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(30, 18);
-            this.textBox9.TabIndex = 28;
-            this.textBox9.Text = "0";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(304, 140);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(30, 18);
-            this.textBox8.TabIndex = 27;
-            this.textBox8.Text = "0";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(304, 124);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(30, 18);
-            this.textBox7.TabIndex = 26;
-            this.textBox7.Text = "0";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chkReserveTable.SelectedIndexChanged += new System.EventHandler(this.CheckToReserveTable);
             // 
             // Form1
             // 
@@ -865,15 +766,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 750);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.chkReserveTable);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -893,7 +785,7 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
+
         }
 
         #endregion
@@ -952,15 +844,6 @@
         internal System.Windows.Forms.Button btnReset;
         internal System.Windows.Forms.Button btnTotal;
         private System.Windows.Forms.CheckedListBox chkReserveTable;
-        internal System.Windows.Forms.TextBox textBox1;
-        internal System.Windows.Forms.TextBox textBox2;
-        internal System.Windows.Forms.TextBox textBox3;
-        internal System.Windows.Forms.TextBox textBox6;
-        internal System.Windows.Forms.TextBox textBox5;
-        internal System.Windows.Forms.TextBox textBox4;
-        internal System.Windows.Forms.TextBox textBox9;
-        internal System.Windows.Forms.TextBox textBox8;
-        internal System.Windows.Forms.TextBox textBox7;
     }
 }
 

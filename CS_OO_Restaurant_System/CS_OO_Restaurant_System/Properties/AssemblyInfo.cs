@@ -10,7 +10,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CWC")]
 [assembly: AssemblyProduct("CS_OO_Restaurant_System")]
-[assembly: AssemblyCopyright("Copyright © CWC 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,38 +1,30 @@
-﻿/*using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System;
-using MailKit.Net.Smtp;
-using MailKit;
+﻿using System;
 using MimeKit; // <-- Pašto siuntimo daiktas: https://stackoverflow.com/questions/449887/sending-e-mail-using-c-sharp
-using System.Net.Mail;
+using MailKit.Net.Smtp;
+using Restaurant_System;
 
 namespace CS_OO_Restaurant_System.Functionality
 {
-    internal class MailingSystem
+    public class MailingSystem : Form1
     {
-        private static readonly object rtReceipt;
-
         public static void MIMEMessage()
         {
             // Mime stands for Multiple Internet Mail Extensions
             // Tools -> Nuget Package Manager -> Package manager console: pm> Install-Package MailKit
             // Less secure app access (G Account security settings)
             MimeMessage message = new MimeMessage(); // <-- Sukuriu naują message objektą, į kurį talpinsiu datą laiško
-            message.From.Add(new MailboxAddress("C# Store", "donatascodeacad@gmail.com")); // <-- šitą dalį gavėjas matys kaip sender lauką
+            message.From.Add(new MailboxAddress("C# Restaurant Cheque", "donatascodeacad@gmail.com")); // <-- šitą dalį gavėjas matys kaip sender lauką
 
             message.To.Add(MailboxAddress.Parse("donatascodeacad@gmail.com")); // <-- Adresato laukas; parse konvertuoja string'ą į pašto adreso duomenį
             message.To.Add(MailboxAddress.Parse("donatascodeacad@gmail.com"));
 
             message.Subject = $"{DateTime.Today.Year}-{DateTime.Today.Month}-{DateTime.Today.Day} Purchase";
 
-            MailingSystem.MIMEMessage(rtReceipt);
+            //MailingSystem.MIMEMessage(rtReceipt);
 
             message.Body = new TextPart("plain") {
                 //Text = "Testas"
-                Text = CartAndChequeSystem.Cheque
+                Text = cheque
             };
             #region (!) SENSITIVE DATA
             //Console.Write("Email: ");
@@ -65,4 +57,4 @@ namespace CS_OO_Restaurant_System.Functionality
 
 // DonatasCodeAcad@gmail.com
 // lalala123654789
-*/
+//feel free to join this empty gmail

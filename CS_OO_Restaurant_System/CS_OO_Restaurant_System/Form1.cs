@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CS_OO_Restaurant_System.Functionality;
 
@@ -15,7 +8,9 @@ namespace Restaurant_System
     public partial class Form1 : Form
     {
         public static List<string> cartList = new List<string>();
-        public static string Tables;
+        public static string tables;
+        public static string cheque;
+
         public Form1()
         {
             InitializeComponent();
@@ -106,8 +101,6 @@ namespace Restaurant_System
             lblSubTotalDrinks.Text = "";
             lblTotal.Text = "";
             rtReceipt.Clear();
-            Tables = "";
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -118,11 +111,10 @@ namespace Restaurant_System
 
         }
 
-        private void BtnTotal_Click(object sender, EventArgs e)
+        public void BtnTotal_Click(object sender, EventArgs e)
         {
             Drinks Cost_of_Meal = new Drinks();
-
-            string reservedTables;
+            //Food 
 
             double iSubTotalFood, iSubTotalDrinks, iTotal;
 
@@ -161,8 +153,8 @@ namespace Restaurant_System
 
             rtReceipt.AppendText("\t\t  Restaurant Management\n\n" +
                 "Order for: \t\t\t\t\t " +
-                $"{Tables}" +
-            "=========================Food==========================\n" +
+                $"{tables}\n" + "\t\t\t\t\t\t 6 seats" +
+            "\n=========================Food==========================\n" +
                 "Fries:\t\t\t\t\t\t" + Cost_of_Meal.Fries + "\n" +
                 "Salad:\t\t\t\t\t\t" + Cost_of_Meal.Salad + "\n" +
                 "Hamburger:\t\t\t\t\t" + Cost_of_Meal.Hamburger + "\n" +
@@ -186,11 +178,38 @@ namespace Restaurant_System
                 "Drinks: \t\t\t\t\t\t" + lblSubTotalDrinks.Text + "\n" +
                 "Total: \t\t\t\t\t\t" + lblTotal.Text + "\n" +
                 "Date and Time: \t\t\t\t " + iDateNTime + "\n");
-            //MailingSystem.MIMEMessage();
+
+            cheque = ("\t\t  AB SWEDBANK \n\n" +
+                "Cheque \t\t\t\t\t " +
+                $"{tables}\n" + "\t\t\t\t\t\t 6 seats" +
+             "\n=========================Food=======================\n" +
+                "Fries:\t\t\t\t\t\t\t\t\t" + Cost_of_Meal.Fries + "\t\t\t\t\t\n" +
+                "Salad:\t\t\t\t\t\t\t\t\t" + Cost_of_Meal.Salad + "\t\t\t\t\t\n" +
+                "Hamburger:\t\t\t\t\t\t\t" + Cost_of_Meal.Hamburger + "\t\t\t\n" +
+                "Onion Rings:\t\t\t\t\t\t" + Cost_of_Meal.OnionRings + " \t\t\n" +
+                "Chicken Salad:\t\t\t\t\t" + Cost_of_Meal.ChickenSalad + " \t\n" +
+                "Fish Sandwich:\t\t\t\t\t" + Cost_of_Meal.FishSandwich + " \t\n" +
+                "Cheese Sandwich:\t\t\t\t" + Cost_of_Meal.CheeseSandwich + " \n" +
+                "Chicken Sandwich: \t\t\t" + Cost_of_Meal.ChickenSandwich + "\n" +
+                "=========================Drinks=====================\n" +
+                "Tea:\t\t\t\t\t\t\t\t\t\t       " + Cost_of_Meal.Tea + "\n" +
+                "Cola: \t\t\t\t\t\t\t\t\t" + Cost_of_Meal.Cola + "\n" +
+                "Coffee: \t\t\t\t\t\t\t\t" + Cost_of_Meal.Coffee + "\n" +
+                "Orange: \t\t\t\t\t\t\t\t" + Cost_of_Meal.Orange + "\n" +
+                "WaterBottle:\t\t\t\t\t\t" + Cost_of_Meal.WaterBottle + "\n" +
+                "Vanilla Cone: \t\t\t\t\t" + Cost_of_Meal.BerryShake + "\n" +
+                "Vanilla Shake:\t\t\t\t\t" + Cost_of_Meal.VanillaShake + "\n" +
+                "Strawberry Shake: \t\t\t" + Cost_of_Meal.StrawberryShake + "\n" +
+                "Choco Shake:\t\t\t\t\t\t" + Cost_of_Meal.ChocolateMilkShake + "\n" +
+                "======================Total Cost=====================\n" +
+                "Food: \t\t\t\t\t\t\t\t\t" + lblSubTotalFood.Text + "\n" +
+                "Drinks: \t\t\t\t\t\t\t\t" + lblSubTotalDrinks.Text + "\n" +
+                "Total:\t\t\t\t\t\t\t\t\t" + lblTotal.Text + "\n" +
+                "Date and Time: \t\t\t\t\t\t\t\t\t" + iDateNTime + "\n");
+
+            SendCheque(cheque);
+            MailingSystem.MIMEMessage();
         }
-
-
-
         private void ChkFries_CheckChanged(object sender, EventArgs e)
         {
             if (chkFries.Checked == true)
@@ -495,9 +514,13 @@ namespace Restaurant_System
             //Iteration for future, now using to reach the last one
             ListBox listBox1 = new ListBox();
             foreach (var item in chkReserveTable.SelectedItems)
-            {                
-                Tables /*+*/= $"{item}";
+            {
+                tables /*+*/= $"{item}";
             }
+        }
+        private void SendCheque(string cheque)
+        {
+
         }
     }
 }

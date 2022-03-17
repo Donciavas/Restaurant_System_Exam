@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using CS_OO_Restaurant_System.Repositories;
 
 namespace CS_OO_Restaurant_System.Functionality
 {
     public class OrderAndChequeSystem
     {
-        public class CartAndChequeSystem
-        {
             #region CLASS GLOBALS
             public static List<string> cartList = new List<string>();
             public static string Cheque;
             public static double cartTotal = 0d;
-            //public static decimal wallet = 0m;
             public static List<double> moneyOperations = new List<double>();
             #endregion
 
@@ -51,7 +44,7 @@ namespace CS_OO_Restaurant_System.Functionality
                 moneyOperations.Add(drinksRepository.LoadDrinksCSVData()[index].Price);
             }
             #endregion
-        }
+        
     }
 }
 
