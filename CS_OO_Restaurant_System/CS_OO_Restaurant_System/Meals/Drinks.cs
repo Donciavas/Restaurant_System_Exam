@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CS_OO_Restaurant_System.Meals;
 
 namespace Restaurant_System
 {
-    class Drinks: Food
+    public class Drinks : Food
     {
+        public string Name { get; internal set; }
+
+        public Drinks(string name = "", double price = 0d) //: base(price)
+        {
+            Name = name;
+            Price = price;
+        }
         public double WaterBottle;
         public double ChocolateMilkShake;
         public double Coffee;
@@ -16,17 +24,17 @@ namespace Restaurant_System
         public double Tea;
         public double VanillaShake;
         public double BerryShake;
-        public double Strawberry;
+        public double StrawberryShake;
 
-        public double Price_BottleWater = 2.2;
+        public double Price_WaterBottle = 2.2;
         public double Price_ChocolateMilkShake = 4.2;
         public double Price_Coffee = 2.5;
-        public double Price_Cola = 2.0;
+        public double Price_Cola = 2.1;
         public double Price_Orange = 2.2;
         public double Price_Tea = 1.5;
         public double Price_VanillaShake = 3.5;
         public double Price_BerryShake = 3.5;
-        public double Price_Strawberry = 3.5;
+        public double Price_StrawberryShake = 3.5;
 
         public double itemsCost3;
         public double itemsCost4;
@@ -35,9 +43,8 @@ namespace Restaurant_System
 
         public double GetAmountDrinks()
         {
-            itemsCost3 = WaterBottle + Tea + ChocolateMilkShake + VanillaShake;
-            itemsCost4 = Coffee + Cola + Orange + BerryShake + Strawberry;
-            itemsCostDrinks = itemsCost3 + itemsCost4;
+            itemsCostDrinks = Convert.ToDouble($"{WaterBottle + ChocolateMilkShake + Coffee + Cola + Orange + Tea + VanillaShake + BerryShake + StrawberryShake}");
+            
             return itemsCostDrinks;
         }
        

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,22 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CS_OO_Restaurant_System.Functionality;
 
 namespace Restaurant_System
 {
     public partial class Form1 : Form
     {
+        public static List<string> cartList = new List<string>();
+        public static string Tables;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void LblTax_Click(object sender, EventArgs e)
+        private void LblFood_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void LblSubTotal_Click(object sender, EventArgs e)
+        private void LblDrinks_Click(object sender, EventArgs e)
         {
 
         }
@@ -35,7 +39,7 @@ namespace Restaurant_System
         private void BtnExit_Click(object sender, EventArgs e)
         {
             DialogResult iExit;
-            iExit = MessageBox.Show("Confirm you want to Exit the System", "Restaurant System", MessageBoxButtons.YesNo, 
+            iExit = MessageBox.Show("Confirm you want to Exit the System", "Restaurant System", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
             if (iExit == DialogResult.Yes)
             {
@@ -102,8 +106,8 @@ namespace Restaurant_System
             lblSubTotalDrinks.Text = "";
             lblTotal.Text = "";
             rtReceipt.Clear();
+            Tables = "";
 
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -111,18 +115,20 @@ namespace Restaurant_System
             EnableTextBoxes();
             RestCheckBoxes();
             ClearTextBoxes();
-            
+
         }
 
         private void BtnTotal_Click(object sender, EventArgs e)
         {
             Drinks Cost_of_Meal = new Drinks();
 
+            string reservedTables;
+
             double iSubTotalFood, iSubTotalDrinks, iTotal;
 
             DateTime iDateNTime;
 
-            Cost_of_Meal.WaterBottle = Cost_of_Meal.Price_BottleWater * Double.Parse(txtBottleWater.Text);
+            Cost_of_Meal.WaterBottle = Cost_of_Meal.Price_WaterBottle * Double.Parse(txtBottleWater.Text);
             Cost_of_Meal.CheeseSandwich = Cost_of_Meal.Price_CheeseSandwich * Double.Parse(txtCheeseSandwich.Text);
             Cost_of_Meal.ChocolateMilkShake = Cost_of_Meal.Price_ChocolateMilkShake * Double.Parse(txtChocolateMilkShake.Text);
             Cost_of_Meal.ChickenSalad = Cost_of_Meal.Price_ChickenSalad * Double.Parse(txtChickenSalad.Text);
@@ -137,24 +143,26 @@ namespace Restaurant_System
             Cost_of_Meal.Orange = Cost_of_Meal.Price_Orange * Double.Parse(txtOrange.Text);
 
             Cost_of_Meal.Salad = Cost_of_Meal.Price_Salad * Double.Parse(txtSalad.Text);
-            Cost_of_Meal.Strawberry = Cost_of_Meal.Price_Strawberry * Double.Parse(txtStrawberry.Text);
+            Cost_of_Meal.StrawberryShake = Cost_of_Meal.Price_StrawberryShake * Double.Parse(txtStrawberry.Text);
             Cost_of_Meal.Tea = Cost_of_Meal.Price_Tea * Double.Parse(txtTea.Text);
             Cost_of_Meal.BerryShake = Cost_of_Meal.Price_BerryShake * Double.Parse(txtVanillaCone.Text);
             Cost_of_Meal.VanillaShake = Cost_of_Meal.Price_VanillaShake * Double.Parse(txtVanillaShake.Text);
-     
+
             iSubTotalFood = Cost_of_Meal.GetAmountFood();
             iSubTotalDrinks = Cost_of_Meal.GetAmountDrinks();
             iTotal = iSubTotalFood + iSubTotalDrinks;
             iDateNTime = DateTime.Now;
 
             lblSubTotalFood.Text = String.Format("{0:C}", iSubTotalFood);
-            lblSubTotalDrinks.Text= String.Format("{0:C}", iSubTotalDrinks);
+            lblSubTotalDrinks.Text = String.Format("{0:C}", iSubTotalDrinks);
             lblTotal.Text = String.Format("{0:C}", iTotal);
 
             //==========================Receipt============================================
-            
+
             rtReceipt.AppendText("\t\t  Restaurant Management\n\n" +
-                "=========================Food==========================\n" +
+                "Order for: \t\t\t\t\t " +
+                $"{Tables}" +
+            "=========================Food==========================\n" +
                 "Fries:\t\t\t\t\t\t" + Cost_of_Meal.Fries + "\n" +
                 "Salad:\t\t\t\t\t\t" + Cost_of_Meal.Salad + "\n" +
                 "Hamburger:\t\t\t\t\t" + Cost_of_Meal.Hamburger + "\n" +
@@ -171,20 +179,21 @@ namespace Restaurant_System
                 "WaterBottle:\t\t\t\t\t" + Cost_of_Meal.WaterBottle + "\n" +
                 "Vanilla Cone:\t\t\t\t\t" + Cost_of_Meal.BerryShake + "\n" +
                 "Vanilla Shake:\t\t\t\t\t" + Cost_of_Meal.VanillaShake + "\n" +
-                "Strawberry Shake:\t\t\t\t" + Cost_of_Meal.Strawberry + "\n" +
+                "Strawberry Shake:\t\t\t\t" + Cost_of_Meal.StrawberryShake + "\n" +
                 "Chocolate Milk Shake:\t\t\t\t" + Cost_of_Meal.ChocolateMilkShake + "\n" +
                 "=========================Total Cost======================\n" +
                 "Food: \t\t\t\t\t\t" + lblSubTotalFood.Text + "\n" +
                 "Drinks: \t\t\t\t\t\t" + lblSubTotalDrinks.Text + "\n" +
                 "Total: \t\t\t\t\t\t" + lblTotal.Text + "\n" +
                 "Date and Time: \t\t\t\t " + iDateNTime + "\n");
+            //MailingSystem.MIMEMessage();
         }
 
-        
+
 
         private void ChkFries_CheckChanged(object sender, EventArgs e)
         {
-            if (chkFries.Checked == true )
+            if (chkFries.Checked == true)
             {
                 txtFries.Text = "";
                 txtFries.Enabled = true;
@@ -194,7 +203,7 @@ namespace Restaurant_System
             {
                 txtFries.Text = "0";
                 txtFries.Enabled = false;
-                
+
             }
         }
 
@@ -456,13 +465,13 @@ namespace Restaurant_System
         private void Number_Only(object sender, KeyPressEventArgs e)
         {
             char c = e.KeyChar;
-            if (!char.IsDigit (c) && c != 8)
+            if (!char.IsDigit(c) && c != 8)
             {
                 e.Handled = true;
             }
         }
 
-       
+
 
         private void Text_Validated(object sender, EventArgs e)
         {
@@ -473,20 +482,24 @@ namespace Restaurant_System
                 b.Text = "0";
             }
         }
-
-        private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void CheckToReserveTable(object sender, System.EventArgs e)
         {
-            /*Action<Control.ControlCollection> func = null;
+            //One check box at the time
+            int iSelectedIndex = chkReserveTable.SelectedIndex;
+            if (iSelectedIndex == -1)
+                return;
+            for (int iIndex = 0; iIndex < chkReserveTable.Items.Count; iIndex++)
+                chkReserveTable.SetItemCheckState(iIndex, CheckState.Unchecked);
+            chkReserveTable.SetItemCheckState(iSelectedIndex, CheckState.Checked);
 
-            func = (controls) =>
-            {
-                foreach (Control control in controls)
-                    if (control is CheckBox)
-                        (control as CheckBox).Checked = false;
-                    else
-                        func(control.Controls);
-            };
-            func(Controls);*/
+            //Iteration for future, now using to reach the last one
+            ListBox listBox1 = new ListBox();
+            foreach (var item in chkReserveTable.SelectedItems)
+            {                
+                Tables /*+*/= $"{item}";
+            }
         }
     }
 }
+
+

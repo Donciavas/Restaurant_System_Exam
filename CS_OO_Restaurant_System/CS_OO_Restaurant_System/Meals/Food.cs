@@ -8,11 +8,14 @@ using System.Threading.Tasks;
 namespace Restaurant_System
 {
     public class Food : Item
-    {        
-        //public double Price { get; set; }
-        public Food(double price = 0d) : base(price)
+    {       
+        public string Name { get; internal set; }
+
+        public Food(string name = "", double price = 0d) : base(price)
         {
-           //price = price;
+           Name = name;
+           Price = price;
+
         }
         public double CheeseSandwich;
         public double ChickenSalad;
@@ -38,9 +41,8 @@ namespace Restaurant_System
 
         public double GetAmountFood()
         {
-            itemscost1 = CheeseSandwich + ChickenSalad + Fries;
-            itemscost2 = ChickenSandwich + OnionRings + FishSandwich + Salad + Hamburger;
-            itemsCostFood = itemscost1 + itemscost2;
+            itemsCostFood = CheeseSandwich + ChickenSalad + FishSandwich + Fries + Hamburger + ChickenSandwich + OnionRings + Salad;
+            
             return itemsCostFood;
         }
     }

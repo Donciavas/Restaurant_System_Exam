@@ -22,10 +22,10 @@ namespace CS_OO_Restaurant_System.Repositories
             FoodList = handler.ReadFoodCSVData("Food");
             return FoodList;
         }
-        /*public void AddFoodToCSV(Food food)
+        public void AddFoodToCSV(Food food)
         {
             var handler = new CSV_Handler();
             handler.WriteFoodDataToCSV("Food", food);
-        }*/
+        }
     }
 }

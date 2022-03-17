@@ -9,3 +9,11 @@ C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\
 C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\Restaurant_System.csproj.CoreCompileInputs.cache
 C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\CS_OO_Restaurant_System.exe
 C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\CS_OO_Restaurant_System.pdb
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\MimeKit.dll
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\System.Buffers.dll
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\MimeKit.pdb
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\MimeKit.xml
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\bin\Debug\System.Buffers.xml
+C:\Users\dvitk\OneDrive\Desktop\CS_OO_Restaurant_System\CS_OO_Restaurant_System\obj\Debug\Restaurant_System.csproj.CopyComplete
